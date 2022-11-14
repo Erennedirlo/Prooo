@@ -1,0 +1,35 @@
+// Written by: Erennedirlo, 30/10/2022
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define loop(a, x, n) for (int a = x; a < n; ++a)
+
+int main() {
+  cout.tie(0); cin.tie(0); ios_base::sync_with_stdio(0);
+
+  int t;
+
+  for (cin >> t; t; --t) {
+    int n;
+    cin >> n;
+    ll sum = 0;
+    int maxi = INT_MIN;
+    
+    loop(i, 0, n) {
+      int a;
+      cin >> a;
+      sum += a;
+    }
+
+    loop(i, 0, n) {
+      int a;
+      cin >> a;
+      sum += a;
+      maxi = max(a, maxi);
+    }
+
+    cout << sum - maxi << "\n";
+  }
+
+  return 0;
+}
